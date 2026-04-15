@@ -147,3 +147,12 @@ resource aws_s3_bucket my_s3_bucket {
 
 	go and check in aws console if s3 bucket is created or not
 	bucket created with same name and region.
+
+5. delete bucket
+	terraform destroy
+	aws_s3_bucket.my_s3_bucket: Refreshing state... [id=test-bucket-tf1a2b3c4d]
+	aws_s3_bucket.my_s3_bucket: Destroying... [id=test-bucket-tf1a2b3c4d]
+	aws_s3_bucket.my_s3_bucket: Destruction complete after 1s
+
+	Destroy complete! Resources: 1 destroyed.
+	
