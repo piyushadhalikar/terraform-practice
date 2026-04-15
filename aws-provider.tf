@@ -43,3 +43,9 @@ terraform {
   aws --version
   aws-cli/2.34.30 Python/3.14.4 Linux/6.17.0-1007-aws exe/x86_64.ubuntu.24
 
+5. configure aws cli
+	create user in iam in aws console and create access key for the user in security group for cli
+	aws configure
+
+	Tip: You can deliver temporary credentials to the AWS CLI using your AWS Console session by running the command 'aws login'.
+
