@@ -59,6 +59,7 @@ resource "aws_instance" "my_instance" {
     security_groups = [aws_security_group.my_security_group.name]
     instance_type = var.ec2_instance_type
     ami = var.ec2_ami_id #ubuntu 24.04 LTS in ap-south-1 region
+    user_data = file("install_nginx.sh") #to install nginx on ec2 instance using user data script
 
     root_block_device {
         volume_size = var.ec2_root_storage_size
