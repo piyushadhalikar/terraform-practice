@@ -9,3 +9,12 @@
 
 4. terraform import aws_key_pair.key_name key-03a1770baed13c390
   to import deleted key from aws into terraform
+
+5. resource "aws_instance" "my_new_instance"{
+  ami = "unknown"
+  instance_type = "unknown"
+}
+  if we don't know anything about ec2 instance but we can import using its id into tf
+
+  terraform import aws_instance.my_new_instance i-0ada6815b45ef6a85
+  this will import in tf from aws
