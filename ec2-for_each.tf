@@ -76,3 +76,20 @@ resource "aws_instance" "my_instance" {
       Name = each.key   # "ec2-automate"
     }
 }
+
+
+#Output:
+
+1. +tags                                 = {
+          + "Name" = "ec2_automate_micro"
+        }
+      + tags_all                             = {
+          + "Name" = "ec2_automate_micro"
+        }
+
+2. + tags                                 = {
+          + "Name" = "ec2_automate_small"
+        }
+      + tags_all                             = {
+          + "Name" = "ec2_automate_small"
+        }
