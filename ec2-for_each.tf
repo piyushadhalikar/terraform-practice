@@ -60,7 +60,7 @@ resource "aws_instance" "my_instance" {
         "ec2_automate_small" = "t3.small"
     })#for_each meta argument to create multiple ec2 instances with different instance types using map function
 
-
+    depends_on = [aws_security_group.my_security_group, aws_key_pair.my_key] #to ensure security group is created before ec2 instance
     # count = 2 # meta argument to create 2 ec2 instances
     key_name = aws_key_pair.my_key.key_name #interpolation to get key name from key pair resource
     security_groups = [aws_security_group.my_security_group.name]
