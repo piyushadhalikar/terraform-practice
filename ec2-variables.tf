@@ -55,6 +55,7 @@ resource "aws_security_group" "my_security_group" {
 }
 # ec2 instance
 resource "aws_instance" "my_instance" {
+    count = 2 # meta argument to create 2 ec2 instances
     key_name = aws_key_pair.my_key.key_name #interpolation to get key name from key pair resource
     security_groups = [aws_security_group.my_security_group.name]
     instance_type = var.ec2_instance_type
